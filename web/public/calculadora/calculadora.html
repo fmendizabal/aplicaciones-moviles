@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&Digito=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="calculadora.css" />
+	<script type='text/javascript' src="calculadora.js"></script>
+	<title>Calculadora</title>
+</head>
+<body>
+	<div class="contenedor">
+		<div class="content-display">
+			<div id="display">0</div>
+		</div>
+		<table>
+			<tr>
+				<td>
+					<button class="top" onclick="reset()">AC</button>
+				</td>
+				<td>
+					<button class="top" onclick="opuesto()">+/-</button>
+				</td>
+				<td>
+					<button class="top" onclick="porcentaje()"> % </button>
+				</td>
+				<td>
+					<button class="side" onclick="elegirOperador('/')">/</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="bottom" onclick="agregarDigito(7)"> 7 </button>
+				</td>
+				<td>
+					<button class="bottom" onclick="agregarDigito(8)"> 8 </button>
+				</td>
+				<td>
+					<button class="bottom" onclick="agregarDigito(9)"> 9 </button>
+				</td>
+				<td>
+					<button class="side" onclick="elegirOperador('*')"> x </button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="bottom" onclick="agregarDigito(4)">4</button>
+				</td>
+				<td>
+					<button class="bottom" onclick="agregarDigito(5)">5</button>
+				</td>
+				<td>
+					<button class="bottom" onclick="agregarDigito(6)">6</button>
+				</td>
+				<td>
+					<button class="side" onclick="elegirOperador('-')">-</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="bottom" onclick="agregarDigito(1)">1</button>
+				</td>
+				<td>
+					<button class="bottom" onclick="agregarDigito(2)">2</button>
+				</td>
+				<td>
+					<button class="bottom" onclick="agregarDigito(3)">3</button>
+				</td>
+				<td>
+					<button class="side" onclick="elegirOperador('+')">+</button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button class="bottom" id="b0" onclick="agregarDigito(0)">0</button>
+				</td>
+				<td>
+					<button class="bottom" onclick="agregarDigito('.')">.</button>
+				</td>
+				<td>
+					<button class="side" onclick="operar()">=</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

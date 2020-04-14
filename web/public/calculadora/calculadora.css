@@ -1,0 +1,135 @@
+* {
+	font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	margin:  0;
+	padding-right: 0;
+	background-color: black;
+}
+
+html,body {
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	touch-action: manipulation;
+	font-size: 100%;
+}
+
+
+
+.contenedor {
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+
+table {
+	width: 100%;
+	height: 60%;
+}
+
+tr {
+	width: 100%;
+	
+}
+td {
+	white-space: nowrap;
+	border: none;
+	text-align: center;
+	width: 25%;
+}
+
+button {
+	transition-duration: 0.4s;
+	width: 80%;
+	height: 80%;
+	border-radius: 50px;
+	border-width: 0;
+	font-size: 30px;
+	transition:  ease;
+}
+
+#b0 {
+	width: 90%;
+	border-radius:50px;
+}
+
+button:hover {
+	background-color: rgb(166,166,166);
+	color: white;
+}
+
+.top {
+	background-color: rgb(166,166,166);
+	color: black;
+}
+.bottom {
+	background-color: rgb(51,51,51);
+	color: white;
+}
+
+.side {
+	background-color: rgb(254,148,0);
+	color: white;
+}
+
+.content-display {
+	padding-top: 5vh;
+	margin-right: 5%;
+	margin-bottom: 10vh;
+	color: white;
+	text-align: right;
+	height: 20vh;
+	font-size: 20vh;
+}
+
+#display {
+	width: 100%;
+	font-size:  20vh;
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+
+#display::-webkit-scrollbar {
+	height: .5rem;
+}
+#display::-webkit-scrollbar-track {
+	background: #1e1e24;
+}
+#display::-webkit-scrollbar-thumb {
+	background: rgb(254,148,0);
+}
+
+
+@media only screen and (max-width: 400px) {
+	button {
+		border-radius: 50%;
+		width: 9vh;
+	}
+
+	#display {
+		font-size: 50px;
+		transition-property: font-size;
+		transition-duration: .5s;
+		transition-delay: 0;
+	}
+	.content-display {
+		height: 10vh;
+		margin-bottom: 0;
+		margin-top: 10vh;
+	}
+}
+
+@media only screen and (min-width:401px) {
+	#display {
+		font-size:  20vh;
+		transition-property: font-size;
+		transition-duration: .2s;
+		transition-delay: .5s;
+	}
+}
