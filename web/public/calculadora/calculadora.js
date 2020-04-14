@@ -132,7 +132,7 @@ function parsearEcuacion(ec) {
 
 function opuesto() {
 	let temp;
-	if (num1.completed === false ) {
+	if (num1.completed === false || operacion == null) {
 		if(ecuacion.startsWith('-')) {
 			ecuacion = ecuacion.slice(1);
 		} else {
@@ -140,7 +140,7 @@ function opuesto() {
 		}
 	} else {
 		temp = ecuacion.split(';');
-		if(temp.length > 2) {
+		if(temp[2] !== '') {
 			if(temp[2].startsWith('-')) {
 				temp[2] = temp[2].slice(1);
 			} else {
@@ -154,11 +154,11 @@ function opuesto() {
 
 function porcentaje() {
 	let temp;
-	if (num1.completed === false ) {
+	if (num1.completed === false || operacion == null) {
 		ecuacion = (parseFloat(ecuacion)/100).toString();
 	} else {
 		temp = ecuacion.split(';');
-		if(temp.length > 2) {
+		if(temp[2] !== '') {
 			temp[2] = (parseFloat(temp[2])/100).toString();
 			ecuacion = temp[0]+';'+temp[1]+';'+temp[2];
 		}
