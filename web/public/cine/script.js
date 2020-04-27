@@ -3,6 +3,12 @@ var movies;
 
 $(document).ready(function() {
 
+
+	$('.back').click(function(){
+		$('.second').hide();
+		$('.first').show();
+		$('#content').html('');
+	})
 	$('.first div').click(function(event){
 		$('.first').hide();
 		$('.second').show();
@@ -13,6 +19,7 @@ $(document).ready(function() {
 	$('.container').click(function(event){
 		if (event.target.id === 'cont') {
 			$('.container').fadeOut('fast');
+			$('.back').fadeIn();
 		}
 		//$('.container').removeClass('show-info').addClass('hide-info');
 	});
@@ -59,6 +66,7 @@ function getData(cinema) {
 					$('.container').fadeIn('fast');
 					$('.container').css('display','flex');
 					displayInfo(movies[event.target.id.substring(5)]);
+					$('.back').hide();
 				}
 			);
 			//$('#'+cardid).flip('true');
