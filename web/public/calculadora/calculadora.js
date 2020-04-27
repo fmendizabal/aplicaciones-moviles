@@ -146,7 +146,7 @@ function opuesto() {
 			} else {
 				temp[2] = '-'+ temp[2];
 			}
-			ecuacion = temp[0]+';'+temp[1]+';'+temp[2];
+			ecuacion = temp[0]+';'+temp[1]+';'+temp[2];u
 		}
 	}
 	cargarDisplay(parsearEcuacion(ecuacion));
